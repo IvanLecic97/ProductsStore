@@ -20,10 +20,11 @@ public class Main {
 	// write your code here
 
         Product p = new Product("Nesto", "brend", 12);
-        Food Apple = new Food("apples", "BrandA", 1.50, "2022-01-18");
+        Food Apple = new Food("apples", "BrandA", 1.50, "2022-01-20");
         Beverage Milk = new Beverage("milk", "BrandM", 0.99, "2022-01-31");
         Clothes Tshirt = new Clothes("T-shirt", "BrandT", 15.99, "M", "violet");
         Appliance Laptop = new Appliance("laptop", "BrandL", 2345, "ModeIL", "2021-03-03", 1.125);
+       // Clothes Jeans = new Clothes("Jeans", "BrandJ", 12.99, "XXL", "blue");
 
         CartService cartService = new CartService();
 
@@ -32,6 +33,7 @@ public class Main {
         cart.addToBeverage(Milk, 3);
         cart.addToClothes(Tshirt, 2);
         cart.addToAppliances(Laptop, 1);
+      //  cart.addToClothes(Jeans, 1);
 
 
         Cashier cashier = new Cashier();

@@ -65,7 +65,18 @@ public class Cart {
 
     public void addToClothes(Clothes clothes, Integer quantity)
     {
-        clothesMap.put(clothes, quantity);
+        Size size = new Size();
+        List<String> sizes = size.listSize();
+        for(String s : sizes )
+        {
+            if(clothes.getSize().equals(s))
+            {
+                clothesMap.put(clothes, quantity);
+            }
+            else
+                System.out.println("You have  chosen invalid size, available are XS, S, M, L and XL");
+        }
+
     }
 
     public void addToAppliances(Appliance appliance, Integer quantity)
